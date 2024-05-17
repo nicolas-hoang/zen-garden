@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mrs+Saint+Delafield&display=swap');
+
+/* ------TABLE OF CONTENT ------*/
+/* Body's General Setting (27 - 33) */
+
+/* ---INTRO--- (35 - 153) */
+/* Heading 1: CSS ZEN GARDEN (45 - 67) */
+/* Heading 2: The Beauty of CSS Design (69 - 97) */
+/* Summary paragraph (99 - 114) */
+/* The Road to Enlightement (116 - 153) */
+
+/* ---MAIN--- (155 - 284) */
+/* So what is this about (170 - 186) */
+/* Participation (188 - 205)*/
+/* Benefits (207 - 230) */
+/* Requirements (232 - 262) */
+/* Footer (264 - 284) */
+
+/* ---COMPLEMENTARY--- (286 - 458) */
+/* Select a Design (303 - 349) */
+/* Archives (351 - 413) */
+/* Resources (415 - 458) */
+
+/* ---RESPONSIVE LAYOUT--- (460 - 506) */
+/* ------TABLE OF CONTENT ENDS ------*/
+
+/* Body's General Settings */
+ body {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    color: rgb(43, 43, 43);
+    margin: 0;
+} 
+
+/* ---INTRO--- */
+section {
+    background-color: #2d2d2d;
+    background-image: url(img/background-cloud.png);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: top;
+    padding-top: 5em;
+}
+
+/* Intro: Heading H1: CSS Zen Garden */
+.intro header h1 {
+    font-family: "Bebas Neue", sans-serif;
+    color: #ff6f00;
+    font-size: 10rem;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    animation-duration: 2s;
+    animation-name: h1-hovering;
+    animation-iteration-count: infinite;
+}
+
+/* Intro: Heading h1 - Hovering effect like a cloud */
+@keyframes h1-hovering {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    
+    50% {
+      transform: translateY(-0.05em);
+    }
+}
+
+/* Intro: Heading H2: The beauty of CSS Design */
+.intro header h2 {
+    font-family: "Mrs Saint Delafield",cursive;
+    font-size: 4rem;
+    color: #593DDB;
+    margin-top: 0;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 2.5em;
+    text-transform: lowercase;
+    /* Text-transform with attribute "lowcase" make text lowcase. Other attributes are "capitalize", "uppercase" and "none */
+    animation-duration: 1s;
+    animation-name: h2-hovering;
+    animation-iteration-count: infinite;
+}
+
+/* Intro: Heading H2 - Hovering effect like a cloud */
+@keyframes h2-hovering {
+    0%, 100% {
+      transform: translateY(0) rotate(-10deg);
+    }
+
+    50% {
+      transform: translateY(-0.05em) rotate(-10deg);
+    }
+}
+
+/* Intro: Summary paragraph */
+.summary {
+    color: #333;
+    margin-bottom: 3.125em;
+    border-radius: 0.5em;
+    padding: 1em;
+    text-align: center;
+    max-width: 37.5em;
+    margin: auto;
+    margin-bottom: 2.5em;
+}
+
+.summary a {
+    color: #ff6f00;
+    text-decoration: none;
+}
+
+/* Intro: The Road to Enlightenment */
+.preamble {
+    background: rgba(255, 245, 180, 0.5);
+    background-size: 6.25em;
+    box-shadow: 0em 0.25em 1.5em 0.25em rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(6.25em); 
+    max-width: 40em;
+    /* 640px */
+    min-width: none;
+    padding-top: 7em;
+    padding-bottom: 2.5em;
+    padding-left: 5em;
+    padding-right: 5em;
+    margin: auto;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    background-image: url(img/background-light.png);
+    background-position: top;
+    background-size: 6.867em;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+/* Intro: The Road to Enlightenment - Heading */
+.preamble h3 {
+    font-size: 2rem;
+    max-width: 37.5em;
+    text-align: center;
+    margin: auto;
+}
+
+/* Intro: The Road to Enlightenment - Paragraph */
+.preamble p {
+    max-width: 37.5em;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* ---MAIN--- */
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "zen-explanation zen-participation"
+    "zen-benefits zen-benefits"
+    "zen-requirements zen-requirements"
+    "footer footer";
+    background-image: url(img/background-mesh.png);
+    background-size: cover;
+
+}
+
+/* Main: So What is This About */
+#zen-explanation {
+    grid-area: zen-explanation;
+    background-color: #291b69;
+    color: #fdffcf;
+    padding: 2.5em;
+    background-image: url(img/papter-corner.png);
+    background-size:5em;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+
+}
+/* Main: So What is This About - Heading */
+#zen-explanation h3 {
+    font-size: 2rem;
+}
+
+/* Main: Participation */
+#zen-participation {
+    grid-area: zen-participation;
+    color: #fdffcf;
+    padding: 2.5em;
+    background-color: #584a94;
+}
+
+/* Main: Participation - Heading */
+#zen-participation h3 {
+    font-size: 2rem;
+}
+
+/* Main: Participation - Links */
+#zen-participation a {
+    color: #ff6f00;
+    text-decoration: none;
+}
+
+/* Main: Benefits */
+#zen-benefits {
+    grid-area: zen-benefits;
+    text-align: center;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    padding-left: 5em;
+    padding-right: 5em;
+    color: #333;
+    margin: 5em;
+    border-radius: 0.5em;
+    border: solid 0.0625em transparent;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0em 0.25em 1.5em 0.25em rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(3.125em); 
+}
+
+/* Main: Benefits - Heading */
+#zen-benefits h3 {
+    font-size: 5rem;
+    font-family: "Mrs Saint Delafield",cursive;
+    margin: 0;
+    color: #ff6f00;
+}
+
+/* Main: Requirements */
+#zen-requirements {
+    grid-area: zen-requirements;
+    padding: 2.5em;
+    background-color: #291b69;
+    color: #fdffcf;
+    background-image: url(img/background-eyes.png);
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: center;
+    background-size: 25em ;
+    padding-left: 31.25em;
+    overflow: hidden;
+}
+
+/* Main: Requirements - Heading */
+#zen-requirements h3 {
+    font-size:  2rem;
+}
+
+/* Add bullet points to the text */
+#zen-requirements p {
+    display: list-item;
+    margin-left: 1em;
+}
+
+/* Main: Requirements - Links */
+#zen-requirements a {
+    text-decoration: none;
+    color: #ff6f00;
+}
+
+/* Main: Footer */
+footer {
+    grid-area: footer;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    gap: 5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* Main: Footer - Links */
+footer a {
+    color: #593DDB;
+    text-decoration: none;
+}
+
+/* Main: Footer - Link hover */
+footer a:hover {
+    color: #ff0095;
+}
+
+/* ---COMPLEMENTARY (SELECT A DESIGN, ARCHIVES AND RESOURCES)--- */
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "design-selection design-selection design-archives"
+    "design-selection design-selection design-archives"
+    "zen-resources zen-resources zen-resources";
+    background-image: url(img/background-cloud-bottom.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: #FFFCDF;
+    overflow: hidden;
+}
+
+/* Complementary: Select a Design */
+#design-selection {
+    grid-area: design-selection;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+}
+
+/* Complementary: Select a Design - Heading */
+#design-selection h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.5rem;
+}
+
+/* Complementary: Select a Design - Design list */
+#design-selection nav ul li {
+    font-size: 2rem;
+    color: #686868;
+    list-style: none;
+}
+
+/* Complementary: Select a Design - Design themes */
+#design-selection nav ul li a:first-child {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: #ff6f00;
+}
+
+/* Complementary: Select a Design - Design themes - Hover */
+#design-selection nav ul li a:first-child:hover {
+    color: #ff0095;
+}
+
+/* Complementary: Select a Design - Authors */
+#design-selection nav ul li a:last-child {
+    font-family: "Mrs Saint Delafield",cursive;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: #593DDB;
+}
+
+/* Complementary: Select a Design - Authors - Hover */
+#design-selection nav ul li a:last-child:hover {
+    color: #ff0095;
+}
+
+/* Complementary: Archives */
+#design-archives {
+    grid-area: design-archives;
+    padding: 2em;
+}
+
+/* Complementary: Archives - Heading */
+#design-archives h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.5rem;
+}
+
+/* Complementary: Archives - List */
+#design-archives nav ul {
+    padding-left: 0;
+}
+
+/* Complementary: Archives - List items */
+#design-archives nav ul li {
+    list-style-type: none;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+}
+
+/* Complementary: Archives - Next design button */
+#design-archives nav ul li:first-child {
+    background-color: #ff6f00;
+}
+
+/* Complementary: Archives - Next design button - Hover */
+#design-archives nav ul li:first-child:hover {
+    background-color: #ff0095;
+}
+
+/* Complementary: Archives - Next design button - Link */
+#design-archives nav ul li:first-child a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Complementary: Archives - View all designs button */
+#design-archives nav ul li:last-child {
+    border: solid 0.125em #ff6f00;
+}
+
+/* Complementary: Archives - View all designs button - Link */
+#design-archives nav ul li:last-child a {
+    text-decoration: none;
+    color: #ff6f00;
+    font-size: 1.5rem;
+}
+
+/* Complementary: Archives - View all designs button - Link - Hover */
+#design-archives nav ul li:last-child a:hover {
+    color: #ff0095;
+}
+
+/* Complementary: Archives - View all designs button - Border - Hover */
+#design-archives nav ul li:last-child:hover {
+    border: solid 0.125em #ff0095;
+}
+
+/* Complementary: Resources */
+#zen-resources {
+    grid-area: zen-resources;
+    padding: 2em;
+}
+
+/* Complementary: Resources - Heading */
+#zen-resources h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* Complementary: Resources - Running text animation */
+#zen-resources ul {
+    display: flex;
+    justify-content: space-around;
+    animation-name: running-text;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes running-text {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Complementary: Resources - List */
+#zen-resources ul li {
+    list-style: none;
+}
+
+/* Complementary: Resources - List - Link */
+#zen-resources ul li a {
+    text-decoration: none;
+    color: #ff6f00 ;
+    font-size: 1.5rem;
+}
+
+/* Complementary: Resources - List - Link Hover */
+#zen-resources ul li a:hover {
+    color: #ff0095;
+}
+
+/* ---RESPONSIVE SCREEN--- */
+@media screen and (max-width: 62.5em) {
+    /* Main */
+    .main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "zen-explanation"
+        "zen-participation"
+        "zen-benefits"
+        "zen-requirements"
+        "footer";
+    }
+
+    /* Main: Requirements */
+    #zen-requirements {
+        padding: 2.5em;
+        background-position-x: right;
+        background-position-y: top;
+        background-size: 12.5em;
+        padding-top: 6.25em;
+    }
+    /* Main: Requirements - Heading */
+    #design-archives h3 {
+        text-align: center;
+    }
+
+    /* Complementary */
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "design-selection"
+        "design-archives"
+        "zen-resources";
+    }
+
+    /* Complementary: Resources - List */  
+    #zen-resources ul{
+        display: flex;
+        flex-direction: column; 
+        animation: none;
+        text-align: center;
+    } 
+}
